@@ -1,5 +1,9 @@
 :root {
     --font-family: 'CircularSp', sans-serif;
+    --font-size: 14px;
+    --text-color: #b3b3b3;
+    --color: #ffffff;
+    --bg-black: #121212;
 }
 
 * {
@@ -47,6 +51,12 @@ input,
 a {
     color: var(--text-color);
     text-decoration: none;
+}
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 // Fonts emmbeded

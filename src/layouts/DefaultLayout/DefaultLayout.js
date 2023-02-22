@@ -13,7 +13,7 @@ function DefaultLayout({ children }) {
         <div className={cx('container')}>
             <div className={'flex'}>
                 <Sidebar />
-                <div className={'conten'}>{children}</div>
+                <div className={cx('conten relative')}>{children}</div>
             </div>
         </div>
     );

@@ -27,23 +27,29 @@ function Silebar() {
                         <img src={images.logos} className={cx('images')} />
                     </Link>
                     <Menu>
-                        <MenuItem
-                            title="Trang Chủ"
-                            to={config.routes.home}
-                            icon={<HomeIcon />}
-                            activeIcon={<HomeActiveIcon />}
-                        />
-                        <MenuItem
-                            title="Tìm kiếm"
-                            to={config.routes.search}
-                            icon={<SearchIcon />}
-                            activeIcon={<SearchActiveIcon />}
-                        />
+                        <ul>
+                            <li className={cx('list-item')}>
+                                <MenuItem
+                                    title="Trang chủ"
+                                    to={config.routes.home}
+                                    icon={<HomeActiveIcon />}
+                                    activeIcon={<HomeActiveIcon />}
+                                />
+                            </li>
+                            <li className={cx('list-item')}>
+                                <MenuItem
+                                    title="Tìm kiếm"
+                                    to={config.routes.search}
+                                    icon={<SearchIcon />}
+                                    activeIcon={<SearchActiveIcon />}
+                                />
+                            </li>
+                        </ul>
                         {/* <MenuItem
                             title="Thư viện"
                             to={config.routes.library}
                             icon={<LibraryIcon />}
-                            // activeIcon={<LibraryActiveIcon />}
+                            activeIcon={<LibraryActiveIcon />}
                         /> */}
                     </Menu>
                 </div>
