@@ -1,15 +1,38 @@
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
-
 import styles from './Button.module.scss';
 
 const cx = classNames.bind(styles);
 
-function Button(to, href, onClick, children, ...passProp) {
+function Button({
+    to,
+    href,
+    disabled = false,
+    btnText = false,
+    small = false,
+    large = false,
+    primary = false,
+    outline = false,
+    rounded = false,
+    onclick,
+    children,
+    leftIcon,
+    className,
+    rightIcon,
+    ...passProps
+}) {
     let Comp = 'button';
+    const props = { onclick, ...passProps };
 
-    const props = { onClick, ...passProp };
+    // remove event listener disabled
+
+    if (disabled) {
+        Object.keys(props).forEach((key) => {
+            if (key.startsWith('on') && typeof props[key] === 'function') {
+                delete props[key];
+            }
+        });
+    }
 
     if (to) {
         props.to = to;
@@ -19,18 +42,21 @@ function Button(to, href, onClick, children, ...passProp) {
         Comp = 'a';
     }
 
-    const classes = cx('wrapper');
+    const classes = cx('wrapper', {
+        [className]: className,
+        rounded,
+        disabled,
+        btnText,
+        large,
+        primary,
+        outline,
+        small,
+    });
 
     return (
-        <Comp classNames={classes} {...props}>
-            <span> {children} </span>
+        <Comp className={classes} {...props}>
+            <span className={cx('title')}> {children}</span>
         </Comp>
     );
 }
-Button.protoType = {
-    to: PropTypes.string,
-    href: PropTypes.string,
-    onClick: PropTypes.func,
-    children: PropTypes.node.isRequired,
-};
 export default Button;

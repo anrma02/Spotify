@@ -1,5 +1,89 @@
 .wrapper {
-    width: 13390px;
+    display: flex;
+    width: 1339px;
     height: 64px;
-        background-color: var(--bg-black);
+    background-color: var(--bg-black);
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+    width: 64px;
+
+    align-items: center;
+    position: relative;
+    left: 30px;
+}
+.btn-icon {
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0.6;
+    border-radius: 50%;
+}
+.icon {
+    width: 20px;
+    fill: currentcolor;
+    height: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+// btn Sign
+.btn {
+    position: absolute;
+    left: 80%;
+    top: 7px;
+    display: flex;
+    width: 245.375px;
+    height: 48px;
+}
+
+.btn-signup {
+    color: var(--text-color);
+    width: 98.162px;
+    height: 40px;
+    padding: 8px 32px 8px 8px;
+
+    &:hover {
+        color: var(--color);
+        transform: scale(1.02);
+    }
+}
+
+.btn-login {
+    background-color: white;
+    color: black;
+    width: 144px;
+    height: 48px;
+    border-radius: 500px;
+
+    &:hover {
+        background-color: rgb(251, 251, 251);
+        transform: scale(1.02);
+    }
+}
+
+// avt
+.acction {
+    position: absolute;
+    left: 90%;
+}
+
+.btn-avt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 13.5px;
+    width: 96px;
+    height: 32px;
+    padding: 2px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 23px;
+}
+
+.avatar {
+    position: relative;
+
+    // left: -1px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
 }

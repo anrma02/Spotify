@@ -15,6 +15,7 @@ function DefaultLayout({ children }) {
                 <Sidebar />
                 <div className={cx('conten relative')}>{children}</div>
             </div>
+            <div className={cx('footer')}>54</div>
         </div>
     );
 }

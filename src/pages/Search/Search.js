@@ -1,7 +1,12 @@
+import Header from '~/layouts/components/Header';
 import Searchs from '~/layouts/components/Search';
 
 function Search() {
-    return <Searchs>daf</Searchs>;
+    return (
+        <div>
+            <Header></Header>
+        </div>
+    );
 }
 
 export default Search;

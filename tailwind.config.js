@@ -1,8 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-    content: ['./src/**/*.{html,js,ts,jsx,tsx}'],
+    mode: 'jit',
+
+    content: [
+        // Example content paths...
+        './public/**/*.html',
+        './src/**/*.{js,jsx,ts,tsx,vue}',
+    ],
     theme: {
+        extend: {
+            // pading, magin, grap
+            spacing: {},
+        },
         screens: {
             tablet: '640px',
             // => @media (min-width: 640px) { ... }

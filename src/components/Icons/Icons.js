@@ -65,7 +65,8 @@ export const SearchActiveIcon = ({ height = '24', width = '24', className }) => 
         className={className}
         width={width}
         height={height}
-        fill="currentColor"
+        fi
+        ll="currentColor"
         aria-hidden="true"
         class="Svg-sc-ytk21e-0 uPxdw search-active-icon"
         viewBox="0 0 24 24"
